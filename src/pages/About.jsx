@@ -1,13 +1,12 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-function NotFound() {
+import Header from "../components/Header";
+function About() {
     return (
       <>
       <Header />
-      <h1>404</h1>
+      <h1>A Propos</h1>
       <Footer />
       </>
-      
     );
   }
-  export default NotFound;
+  export default About;
