@@ -8,9 +8,24 @@ footer
     font-weight: 500
     height: 209px
     justify-content: center
+    text-align: center
     width: 100%
     img
         margin-top: 66px
         width: 122px
-    p
+    div
+        display: flex
+        justify-content: center
+        height: 46px
         margin: 29px 0
+        p
+            align-self: flex-end
+            margin: 0
+
+@media (max-width: 768px)
+    footer
+        div
+            font-size: 12px
+            margin-top: 0
+            p
+                width: 70%
