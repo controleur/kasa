@@ -6,8 +6,10 @@ function About() {
     return (
       <>
       <Header />
-      <Banner imgSrc={mottoImg}/>
-      <h1>A Propos</h1>
+      <main>
+        <Banner imgSrc={mottoImg}/>
+        <h1>A Propos</h1>
+      </main>
       <Footer />
       </>
     );
