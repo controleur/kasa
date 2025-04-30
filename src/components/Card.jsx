@@ -1,11 +1,13 @@
 import '../styles/Card.sass'
+import { Link } from "react-router";
 
-function Card() {
+function Card({title, cover, id}) {
     return (
-      <div className='card'>
-        <div className='cover'></div>
-        <p>Magnifique appartement proche Canal Saint Martin</p>
-      </div>
+      <Link to={`/logement/${id}`} className='card'>    
+          <div className='gradient'></div>
+          <img src={cover} alt={title} />
+          <p>{title}</p>
+      </Link>
     );
   }
   export default Card;

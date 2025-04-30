@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import mottoImg from '../assets/visuels/motto1.jpg'
 import '../styles/Home.sass'
+import logementsData from '../data/data.json'
 
 function Home() {
   return (
@@ -13,12 +14,9 @@ function Home() {
     <main>
       <Banner imgSrc={mottoImg} mottoText='Chez vous, partout et ailleurs' />
       <div className="gallery">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      {logementsData.map((logement) => (
+					<Card title={logement.title} cover={logement.cover} id={logement.id} key={logement.id} />
+				))}
       </div>
     </main>
     <Footer />
