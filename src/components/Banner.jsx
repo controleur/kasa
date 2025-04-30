@@ -1,10 +1,10 @@
 import '../styles/Banner.sass'
-import motto from '../assets/visuels/motto1.jpg'
-function Banner() {
+
+function Banner({imgSrc, mottoText}) {
     return (
       <div className='banner'>
-        <img src={motto} alt="" />
-        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={imgSrc} alt="" />
+        {mottoText && <h1>{mottoText}</h1>}
       </div>
     );
   }
