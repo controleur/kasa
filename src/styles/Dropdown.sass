@@ -1,0 +1,39 @@
+.dropdown
+    .title
+        color: white
+        height: 52px
+        border-radius: 5px
+        font-weight: 700
+        font-size: 24px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 20px 0 15px
+        background: #FF6060
+        position: relative
+        z-index: 2
+    .content
+        background: #F6F6F673;
+        font-size: 17px
+        max-height: 0
+        overflow: hidden
+        transition: all 0.25s linear   
+        transform: translateY(-30px)
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        &.active
+            max-height: 500px
+            transform: translateY(0);
+        p
+            margin: 20px
+    img
+        cursor: pointer
+        transition: all 0.25s linear,
+        &.active
+            transform: rotate(-180deg)
+@media (max-width: 768px)
+    .dropdown
+        .title
+            font-size: 13px
+        p
+            font-size: 12px
