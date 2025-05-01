@@ -1,16 +1,28 @@
+import { useState } from 'react';
 import '../styles/Slideshow.sass'
 import previous from '../assets/visuels/arrow_back.svg'
 import next from '../assets/visuels/arrow_forward.svg'
-function Slideshow() {
+function Slideshow({ pictures }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const handlePrevious = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
+      };
+    
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
+    };
+    const controls = (<>
+    <div className='controls'>
+        <img src={previous} alt="Précédent" onClick={handlePrevious} />
+        <img src={next} alt="Suivant" onClick={handleNext} />     
+    </div>
+    <div className='indicator'>{currentIndex + 1}/{pictures.length}</div>
+    </>)
     return (
       <div className='slideShow'>
-        <img className='slide' src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="" />
-        <div className='controls'>
-            <img src={previous} alt="" />
-            <img src={next} alt="" />     
-        </div>
-        <div className='indicator'>1/4</div>
-      </div>
+        <img className='slide' src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+        {pictures.length>1 ? controls : ""}
+    </div>
     );
   }
   export default Slideshow;
