@@ -10,7 +10,7 @@ function Dropdown({title, content}) {
       <div className='dropdown'>
         <div className='title'>{title}<img src={arrow} className={isActive ? "active" : ""} alt="Afficher/Masquer le contenu" onClick={toggleDropdown} /></div>
         <div className={`content ${isActive ? "active" : ""}`}>
-            <p>{content}</p>
+            <div className='text'>{content}</div>
         </div>
       </div>
     );
