@@ -1,0 +1,37 @@
+.slideShow
+    height: 415px
+    border-radius: 25px
+    overflow: hidden
+    position: relative
+    .slide
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+    .controls
+        position: absolute
+        z-index: 2
+        display: flex
+        height: 100%
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        img
+            height: 120px
+    .indicator
+        position: absolute
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 25px auto
+        bottom: 0
+        width: 100%
+        text-align: center
+@media (max-width: 768px)
+    .slideShow
+        height: 255px
+        .controls
+            img
+                width: 24px
+        .indicator
+            display: none

@@ -1,10 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Slideshow from "../components/Slideshow";
+import '../styles/Logement.sass'
 function Logement() {
     return (
       <>
       <Header />
-      <h1>Logement</h1>
+      <main className="logement">
+        <Slideshow />
+      </main>
       <Footer />
       </>
       
