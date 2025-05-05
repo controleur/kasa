@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import mottoImg from "../assets/visuels/motto2.jpg";
 import Banner from "../components/Banner";
 import Dropdown from "../components/Dropdown";
-import "../styles/About.sass"
+import "../styles/About.sass";
 function About() {
   return (
     <>
