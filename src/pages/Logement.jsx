@@ -1,7 +1,8 @@
-import { useParams, Navigate } from "react-router";
+import { useParams } from "react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Slideshow from "../components/Slideshow";
+import NotFound from "./NotFound";
 import Dropdown from "../components/Dropdown";
 import logementsData from "../data/data.json";
 import starActive from "../assets/visuels/star-active.svg";
@@ -11,7 +12,7 @@ function Logement() {
   const { id } = useParams();
   const logement = logementsData.find((logement) => logement.id === id);
   if (!logement) {
-    return <Navigate to="/notfound" />;
+    return <NotFound />
   }
   const showTags = (tag, index) => (
     <div className="tagElement" key={index}>
