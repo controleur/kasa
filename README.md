@@ -32,7 +32,7 @@ Ce projet propose l'intégration d'une [maquette Figma](https://www.figma.com/fi
 
 ## Utilisation avec une API
 
-Ce projet a pour vocation à être utilisé avec une API et un Back-End. Le cahier des charges inclu l'utilisation d'un fichier json remplaçant ce rôle dans l'attente du développement et du déploiement de ce back-end. Afin de préparer la transtition, le projet sera modifié pour intégrer une gestion des données avec fetch.
+Ce projet a pour vocation à être utilisé avec une API et un Back-End. Le cahier des charges inclu l'utilisation d'un fichier json remplaçant ce rôle dans l'attente du développement et du déploiement de ce back-end. Afin de préparer la transtition, le projet intégre une gestion des données avec fetch au lieu d'un import simple du json.
 
 ---
 
