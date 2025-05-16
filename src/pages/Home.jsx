@@ -4,9 +4,16 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import mottoImg from "../assets/visuels/motto1.jpg";
 import "../styles/Home.sass";
-import logementsData from "../data/data.json";
-
+import { useEffect, useState } from "react";
 function Home() {
+  const [logementsData, setLogementsData] = useState([]);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((data) => setLogementsData(data))
+      .catch((error) => console.error("Erreur lors du chargement des données :", error));
+  }, []);
   return (
     <>
       <Header />

@@ -4,11 +4,19 @@ import Footer from "../components/Footer";
 import Slideshow from "../components/Slideshow";
 import NotFound from "./NotFound";
 import Dropdown from "../components/Dropdown";
-import logementsData from "../data/data.json";
+import { useEffect, useState } from 'react';
 import starActive from "../assets/visuels/star-active.svg";
 import starInactive from "../assets/visuels/star-inactive.svg";
 import "../styles/Logement.sass";
 function Logement() {
+  const [logementsData, setLogementsData] = useState([]);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((data) => setLogementsData(data))
+      .catch((error) => console.error("Erreur lors du chargement des données :", error));
+  }, []);
   const { id } = useParams();
   const logement = logementsData.find((logement) => logement.id === id);
   if (!logement) {
